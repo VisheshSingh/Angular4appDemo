@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-user',
@@ -13,7 +14,7 @@ export class UserComponent implements OnInit {
   hobbies: string[]; // an array of strings;
   hello: any; //could be anything. Eg: string or number
 
-  constructor() {
+  constructor(private DS: DataService) {
     console.log('Constructor ran..');
   }
 
