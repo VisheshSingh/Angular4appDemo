@@ -10,6 +10,33 @@
   <li>Address: {{address.street}}, {{address.city}}, {{address.state}} {{address.zip}}</li>
 </ul>
 
+<h2>Two-way data binding</h2>
+<form>
+  <div>
+    <label for="Name">Name: </label><br/>
+    <input type="text" [(ngModel)]="name" name="name">
+  </div>
+  <div>
+    <label for="Age">Age: </label><br/>
+    <input type="number" [(ngModel)]="age" name="age">
+  </div>
+  <div>
+    <label for="Email">Email: </label><br/>
+    <input type="text" [(ngModel)]="email" name="email">
+  </div>
+  <div>
+    <label for="Street">Street: </label><br/>
+    <input type="text" [(ngModel)]="address.street" name="street">
+  </div>
+  <div>
+    <label for="City">City: </label><br/>
+    <input type="text" [(ngModel)]="address.city" name="city">
+  </div>
+  <div>
+    <label for="State">State: </label><br/>
+    <input type="text" [(ngModel)]="address.state" name="state">
+  </div>
+</form>
 <h2>Loop through the elements of array with *ngFor directive</h2>
 <!--Loop through the elements of array with ng-For directive-->
 <p>Hobbies:</p>
