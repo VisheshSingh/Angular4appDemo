@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   address: Address;//interface provided at the bottom as it is an object
   hobbies: string[]; // an array of strings;
   hello: any; //could be anything. Eg: string or number
+  posts: any;
 
   constructor(private DS: DataService) {
     console.log('Constructor ran..');
@@ -31,6 +32,11 @@ export class UserComponent implements OnInit {
     };
     this.hobbies = ['write code', 'teach code', 'cricket'];
     this.hello = "hey!!!";
+
+    this.DS.getPosts().subscribe((posts) => {
+      //console.log(posts);
+      this.posts = posts;
+    });
   }
 
   onClick(){
@@ -57,4 +63,11 @@ interface Address{
   city: string,
   state: string,
   zip: string
+}
+
+interface Posts {
+  id:number,
+  title:string,
+  body:string,
+  userId:number
 }
