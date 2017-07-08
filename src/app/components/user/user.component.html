@@ -1,4 +1,4 @@
-<h2>Property Binding via String Interpolation</h2>
+<h2>Data Binding via String Interpolation</h2>
 <p>
   Hello {{name}} <!--String Interpolation using properties-->
 </p>
@@ -12,6 +12,11 @@
 
 <h2>Loop through the elements of array with *ngFor directive</h2>
 <!--Loop through the elements of array with ng-For directive-->
+<p>Hobbies:</p>
 <ul>
-  <li *ngFor = "let hobby of hobbies">{{hobby}}</li>
+  <li *ngFor = "let hobby of hobbies; let i = index">{{i+1}}: {{hobby}}</li>
 </ul>
+
+<h2>Event handling</h2>
+<button (click)="onClick()">Click me!</button>
+<p>{{hello}}</p>

@@ -31,6 +31,11 @@ export class UserComponent implements OnInit {
     this.hobbies = ['write code', 'teach code', 'cricket'];
     this.hello = "hey!!!";
   }
+
+  onClick(){
+    this.hello = 'hello man!!!';
+    this.hobbies.push('New Hobby');
+  }
 }
 
 interface Address{
