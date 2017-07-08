@@ -10,6 +10,8 @@
   <li>Address: {{address.street}}, {{address.city}}, {{address.state}} {{address.zip}}</li>
 </ul>
 
+<button (click)="toggleEdit()">Edit User</button>
+<div *ngIf=isEdit>
 <h2>Two-way data binding</h2>
 <form>
   <div>
@@ -37,6 +39,7 @@
     <input type="text" [(ngModel)]="address.state" name="state">
   </div>
 </form>
+</div>
 <h2>Loop through the elements of array with *ngFor directive</h2>
 <!--Loop through the elements of array with ng-For directive-->
 <p>Hobbies:</p>
